@@ -30,13 +30,9 @@ export const Navbar = () => {
 
 
   return (
-    <HeroUINavbar
-      maxWidth="full"
-      position="sticky"
-    >
-      <div className="flex justify-end w-full">
-        <ThemeSwitch />
-      </div>
-    </HeroUINavbar>
+    <div className="flex justify-end m-3 bg-grey-200">
+      <ThemeSwitch />
+    </div>
+    
   );
 };

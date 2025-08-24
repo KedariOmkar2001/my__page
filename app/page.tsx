@@ -1,54 +1,57 @@
 import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-import { Tooltip } from "@heroui/tooltip";
-import { Button } from "@heroui/button";
+import { Divider } from "@heroui/divider";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
-import { Card, CardBody } from "@heroui/card";
-import { Divider } from "@heroui/divider";
+import { Github, Linkedin } from "lucide-react";
 
 export default function Home() {
   return (
-    <>
-      <div className="flex justify-center items-center w-full">
-
-        <div className="flex flex-col">
-
-          <div className="justify-center items-start">
-
-            <p>I am Omkar Kedari , the Ceo and Co Founder of 
-
-              <Tooltip
-                content={"CharAscend"}
-              >
-                <Link href="charascend.com" className="ml-1 mr-1"> CharAscend </Link>
-              </Tooltip>
-
-
-
-               and <Tooltip
-                content={"RealBricks"}
-              >
-                <Link href="realbricks.com" className="ml-1 mr-1"> RealBricks </Link>
-              </Tooltip></p>
-
-          </div>
-
-          <Divider className="my-4" />
-
-          <div className="flex gap-5 p-3 justify-center items-center">
-            <Link isBlock showAnchorIcon color="primary" href="#">
-              GitHub
-            </Link>
-            <Link isBlock showAnchorIcon color="primary" href="#">
-              LinkedIn
-            </Link>
-          </div>
+    <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4 dark:bg-black">
+      <div className="text-center max-w-md">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2 dark:text-white">Omkar Kedari</h1>
+        <p className="text-md text-gray-600 mb-4">CEO & Founder</p>
+        <div className="mb-6">
+          <p className="text-gray-700">
+            I lead{" "}
+            <a href="https://www.charascend.com" target="_blank" className="text-blue-600 hover:underline font-bold">
+              CharAscend
+            </a>{" "}
+            and{" "}
+            <a href="https://www.realbricks.com" target="_blank" className="text-blue-600 hover:underline font-bold">
+              RealBricks
+            </a>
+            , driving innovation in technology.
+          </p>
+        </div>
+        <Divider className="my-6 mb-5 mt-3" />
+        <div className="flex justify-center gap-6">
+          <Link
+            isBlock
+            showAnchorIcon
+            color="primary"
+            href="https://github.com/KedariOmkar2001"
+            className="text-gray-700 hover:text-blue-600"
+          >
+            <div className="flex gap-2 items-center">
+                  <Github className="w-5 h-5 text-gray-700 hover:text-black transition" />
+            GitHub
+            </div>
+          
+          </Link>
+          <Link
+            isBlock
+            showAnchorIcon
+            color="primary"
+            href="https://www.linkedin.com/in/omkarkedari/"
+            className="text-gray-700 hover:text-blue-600"
+          >
+            <div className="flex gap-2 items-center">
+                  <Linkedin className="w-5 h-5 text-gray-700 hover:text-black transition" />
+            LinkedIn
+            </div>
+          </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
